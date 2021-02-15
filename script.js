@@ -11,9 +11,10 @@ function empty(value) {
     return (value == null || value === '');
 }
 
-plus.addEventListener("click", () => {
-    first_class.value = parseInt(first_class.value) + 1;
-});
+function onePlus(id) {
+    const element = document.querySelector(`#${id}`);
+    element.value = parseInt(element.value) + 1;
+}
 
 minus.addEventListener("click", () => {
     const book_quantity = parseInt(first_class.value) - 1;
