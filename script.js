@@ -16,15 +16,16 @@ function onePlus(id) {
     element.value = parseInt(element.value) + 1;
 }
 
-minus.addEventListener("click", () => {
-    const book_quantity = parseInt(first_class.value) - 1;
+function oneMinus(id) {
+    const element = document.querySelector(`#${id}`);
+    const quantity = parseInt(element.value) - 1;
 
-    if (book_quantity > -1) {
-        first_class.value = book_quantity;   
+    if (quantity > -1) {
+        element.value = quantity;   
     } else {
         alert('Negative quantity not exist!');     
     }
-});
+}
 
 first_class.addEventListener("input", () => {
     const book_quantity = parseInt(first_class.value);
