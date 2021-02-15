@@ -57,22 +57,22 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" oninput="validity.valid || (value = '0')" value="0" name="first_class" id="first_class">
+                    <input class="inp-style inp-width" type="number" value="0" oninput="inputBoxCheck('first_class')" name="first_class" id="first_class">
                 </div>
 
                 <div class="plus-minus-btn">
-                    <p><span id="plus">+</span> <span id="minus">-</span></p>
+                    <p><span id="plus" onclick="onePlus('first_class')">+</span> <span id="minus" onclick="oneMinus('first_class')">-</span></p>
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" oninput="validity.valid || (value = '0')" value="0" name="economy" id="economy">
+                    <input class="inp-style inp-width" type="number" value="0" oninput="inputBoxCheck('economy')" name="economy" id="economy">
                 </div>
 
                 <div class="plus-minus-btn">
-                    <p><span id="plus2">+</span> <span id="minus2">-</span></p>
+                    <p><span id="plus2" onclick="onePlus('economy')">+</span> <span id="minus2" onclick="oneMinus('economy')">-</span></p>
                 </div>
             </div>
 
