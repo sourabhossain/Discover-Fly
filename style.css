@@ -116,8 +116,16 @@ a.active {
   color: #fff;
   font-weight: 500;
   background-color: #3352f2;
+  cursor: pointer;
 }
 .amount {
   display: flex;
   justify-content: space-between;
+}
+
+#plus,
+#minus,
+#plus2,
+#minus2 {
+  cursor: pointer;
 }
