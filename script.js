@@ -4,8 +4,12 @@ const subtotal    = document.querySelector("#subtotal");
 const vat         = document.querySelector("#vat");
 const total       = document.querySelector("#total");
 
-function billCalculation() {
+billCalculation();
 
+function billCalculation() {
+    subtotal.innerText = ((parseFloat(first_class.value) * 150.00) + (parseFloat(economy.value) * 100.00)).toFixed(2);
+    vat.innerText = (parseFloat(subtotal.innerText) * 0.10).toFixed(2);
+    total.innerText = (parseFloat(subtotal.innerText) + parseFloat(vat.innerText)).toFixed(2);
 }
 
 function empty(value) {
@@ -15,6 +19,7 @@ function empty(value) {
 function onePlus(id) {
     const element = document.querySelector(`#${id}`);
     element.value = parseInt(element.value) + 1;
+    billCalculation();
 }
 
 function oneMinus(id) {
@@ -26,6 +31,8 @@ function oneMinus(id) {
     } else {
         alert('Negative quantity not exist!');    
     }
+
+    billCalculation();
 }
 
 function inputBoxCheck(id) {
@@ -38,4 +45,6 @@ function inputBoxCheck(id) {
         alert('Negative quantity not exist!');
         element.value = 0;
     } 
+
+    billCalculation();
 }
