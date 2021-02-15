@@ -48,3 +48,7 @@ function inputBoxCheck(id) {
 
     billCalculation();
 }
+
+function bookNow() {
+    alert(`First Class: ${first_class.value}, Economy: ${economy.value} is Block!`);
+}
